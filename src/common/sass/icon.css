@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'iconFonts';
+  src:  url('../fonts/iconFonts.eot?2bk1pl');
+  src:  url('../fonts/iconFonts.eot?2bk1pl#iefix') format('embedded-opentype'),
+    url('../fonts/iconFonts.ttf?2bk1pl') format('truetype'),
+    url('../fonts/iconFonts.woff?2bk1pl') format('woff'),
+    url('../fonts/iconFonts.svg?2bk1pl#iconFonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconFonts' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add_circle:before {
+  content: "\e900";
+}
+.icon-arrow_lift:before {
+  content: "\e901";
+}
+.icon-check_circle:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-favorite:before {
+  content: "\e904";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e905";
+}
+.icon-remove_circle_outline:before {
+  content: "\e906";
+}
+.icon-shopping_cart:before {
+  content: "\e907";
+}
+.icon-thumb_down:before {
+  content: "\e908";
+}
+.icon-thumb_up:before {
+  content: "\e909";
+}
