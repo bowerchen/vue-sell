@@ -1,7 +1,9 @@
 var express = require('express')
-var config = require('./config/index')
+// var config = require('./config/index')
 
-var port = process.env.PORT || config.build.port || 8897
+// var port = process.env.PORT || config.build.port || 8897
+
+var port = process.env.PORT || 8898
 
 var app = express()
 
