@@ -10,8 +10,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-    publicPath: '/',
-
+    
     css: { sourceMap: true },
 
     // 获取JSON数据
