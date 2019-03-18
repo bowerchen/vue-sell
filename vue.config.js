@@ -10,7 +10,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-    
+
     css: { sourceMap: true },
 
     // 获取JSON数据
@@ -50,5 +50,5 @@ module.exports = {
             .loader('vue-loader')
             .tap(options => Object.assign(options, { limit: 10240 }))
     },
-    baseUrl: ''
+    publicPath: ''
 }
