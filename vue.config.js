@@ -50,6 +50,6 @@ module.exports = {
             .use('vue-loader')
             .loader('vue-loader')
             .tap(options => Object.assign(options, { limit: 10240 }))
-      }
-    // baseUrl: ''
+      },
+    baseUrl: ''
 }

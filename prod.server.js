@@ -1,9 +1,9 @@
 var express = require('express')
-// var config = require('./config/index')
+var config = require('./config/index')
 
-// var port = process.env.PORT || config.build.port || 8897
+var port = process.env.PORT || config.build.port
 
-var port = process.env.PORT || 8898
+// var port = process.env.PORT || 8898
 
 var app = express()
 
@@ -22,6 +22,7 @@ var goods = appDate.goods
 var ratings = appDate.ratings
 
 var apiRoutes = express.Router()
+
 apiRoutes.get('/seller', function(req, res) {
     res.json({
         errno: 0,
