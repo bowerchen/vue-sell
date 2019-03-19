@@ -19,16 +19,21 @@
 <script>
 import { getSeller } from 'api'
 import VHeader from 'components/v-header/v-header'
+import qs from 'query-string'
 
 export default {
   name: 'app',
   data() {
     return {
-      seller: {}
+      seller: {
+        id: qs.parse(location.search).id
+      }
     }
   },
   created() {
-    getSeller().then((seller) => {
+    getSeller({
+      id: this.seller.id
+    }).then((seller) => {
       this.seller = seller
     })
   },

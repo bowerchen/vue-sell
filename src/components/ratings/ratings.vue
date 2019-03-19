@@ -118,7 +118,9 @@ export default {
         }
     },
     created() {
-        getRatings().then((ratings) => {
+        getRatings({
+            id: this.seller.id
+        }).then((ratings) => {
             this.ratings = ratings
             this.$nextTick(() => {
                 this.scroll = new BScroll(this.$refs.ratings, {

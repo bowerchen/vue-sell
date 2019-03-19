@@ -148,7 +148,9 @@ export default {
         }
     },
     created() {
-        getGoods().then((goods) => {
+        getGoods({
+            id: this.seller.id
+        }).then((goods) => {
             this.goods = goods
             this.$nextTick(() => {
                 this._initScroll()

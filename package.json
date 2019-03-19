@@ -12,7 +12,10 @@
     "axios": "^0.18.0",
     "better-scroll": "^1.14.1",
     "express": "^4.16.4",
+    "good-storage": "^1.1.0",
+    "icon-maker-loader": "^0.1.13",
     "normalize.css": "^8.0.1",
+    "query-string": "^6.4.0",
     "url-loader": "^1.1.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2"

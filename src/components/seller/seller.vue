@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="favorite" @click="toggleFavorite">
-                    <i class="icon-favorite icon" :class="{'on': active}"></i>
+                    <i class="icon-favorite icon" :class="{'on': favorite}"></i>
                     <div class="text">
                         {{favoriteText}}
                     </div>
@@ -73,6 +73,9 @@ import BScroll from 'better-scroll'
 import star from 'components/star/star'
 import split from 'components/split/split'
 import supportIcon from 'components/support-icon/support-icon'
+import { saveToLocal, loadFromLocal } from 'common/js/storage'
+
+const KEY = 'favorite'
 
 export default {
     props: {
@@ -85,12 +88,12 @@ export default {
     },
     data() {
         return {
-            active: false
+            favorite: false
         }
     },
     computed: {
         favoriteText() {
-            return this.active ? '已收藏' : '收藏'
+            return this.favorite ? '已收藏' : '收藏'
         } 
     },
     components: {
@@ -111,6 +114,10 @@ export default {
             this._initScroll()
             this._picScroll()
         }) 
+    },
+    created() {
+        this.favorite = loadFromLocal(this.seller.id, KEY, false)
+
     },
     methods: {
         _initScroll() {
@@ -141,7 +148,8 @@ export default {
             } 
         },
         toggleFavorite() {
-            this.active = !this.active
+            this.favorite = !this.favorite
+            saveToLocal(this.seller.id, KEY, this.favorite)
         }
     }
 }
